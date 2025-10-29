@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Feedback - Website Name</title>
+  <link rel="stylesheet" href="feedback.css" />
+  <script defer src="feedback.js"></script>
+
+<body>
+  <main class="feedback-wrapper">
+    <section class="feedback-card">
+      <h1>Feedback</h1>
+      <p>Your opinion matters to us — let us know what you think!</p>
+
+      <!-- FORM -->
+      <form id="feedbackForm">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="you@example.com" required>
+
+        <label>Message</label>
+        <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
+
+        <button type="submit">Send Feedback</button>
+      </form>
+
+      <!-- Hidden success message -->
+      <div class="success-message" id="successMessage">
+        🎉 Thank you! Your feedback has been sent successfully.
+      </div>
+    </section>
+  </main>
+
+  <!--- script link https://script.google.com/macros/s/AKfycbwxhFiheaK3bxag2Y7P5UZjVR-5IVv7QHJ_kysu40b2b5sNj2MM-aDHeou9sO1tzsc/exec-->
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwxhFiheaK3bxag2Y7P5UZjVR-5IVv7QHJ_kysu40b2b5sNj2MM-aDHeou9sO1tzsc/exec";
+  const form = document.getElementById('feedbackForm');
+  const thankYou = document.getElementById('thankYouMessage');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: JSON.stringify(Object.fromEntries(new FormData(form))) })
+      .then(response => {
+        form.reset();
+        thankYou.style.display = 'block';
+        thankYou.style.animation = 'fadeIn 0.8s';
+        setTimeout(() => thankYou.style.display = 'none', 4000);
+      })
+      .catch(error => alert('Error! Please try again.'));
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-bar">
+    <div class="bottom-inner">
+      <nav class="bottom-bar" role="navigation" aria-label="Main navigation">
+    <div class="bottom-inner">
+      <div class="logo-wrap">
+        <img src="https://export-download.canva.com/wtPoc/DAG3JtwtPoc/1/0/0001-8302868766018531940.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251028T154120Z&X-Amz-Expires=60576&X-Amz-Signature=78d85aa0cd6fdf9a4154d7a05a8e7a99cdb45d7f7f6a3b0bcb251ffc824fbc0a&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.jpg&response-expires=Wed%2C%2029%20Oct%202025%2008%3A30%3A56%20GMT" alt="Logo" class="logo-img">
+      </div>
+      <ul class="bottom-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+  </head>
+</body>
+</html>

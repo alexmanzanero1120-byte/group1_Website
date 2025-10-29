@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("https://export-download.canva.com/hr80w/DAG3Frhr80w/47/0-330371518177386674.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251028T093837Z&X-Amz-Expires=77605&X-Amz-Signature=3289a16444b5d41a642f0bf836919daae6fe16084cee68a63fafd708715902af&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27FEEDBACK.gif&response-expires=Wed%2C%2029%20Oct%202025%2007%3A12%3A02%20GMT") no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Center the form */
+.feedback-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Card style */
+.feedback-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.feedback-card h1 {
+  font-size: 2rem;
+  color: #ec8a1a;
+  margin-bottom: 10px;
+}
+
+.feedback-card p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* Inputs */
+.feedback-card input,
+.feedback-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.feedback-card input:focus,
+.feedback-card textarea:focus {
+  border-color: #ec8a1a;
+  box-shadow: 0 0 6px rgba(236,138,26,0.4);
+}
+
+/* Button */
+.feedback-card button {
+  background: #ec8a1a;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feedback-card button:hover {
+  background: #e07b00;
+  transform: scale(1.05);
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  margin-top: 20px;
+  color: #28a745;
+  font-weight: bold;
+  animation: popIn 0.8s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Bottom nav (same style as other pages) */
+.bottom-bar {
+  background: #ec8a1a;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+}
+
+.bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.bottom-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bottom-links a.active {
+  text-decoration: underline;
+}

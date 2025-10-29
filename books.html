@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Books | Website Name</title>
+  <link rel="stylesheet" href="booksbackground.css">
+  <style>
+    /* Background */
+    .books-section {
+      background-image: url('images/bookshelf-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Header */
+    .books-header {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 10px;
+      width: fit-content;
+      margin: 0 auto 30px;
+    }
+
+    .books-header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .books-header p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+
+    /* Replace the shelf layout with grid layout */
+    .shelf-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      justify-items: center;
+      align-items: start;
+      padding: 40px 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Keep the same card design */
+    .card {
+      display: block;
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+      width: 160px;
+      padding: 15px;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      color: #9f7fff;
+      margin: 0;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      margin: 2px 0 0;
+    }
+
+    /* Hide the shelf divisions (since we’re using a grid now) */
+    .shelf, .shelf-row {
+      display: contents;
+    }
+
+    /* Bottom navigation */
+    .bottom-bar {
+      background: #f7931e;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 100;
+    }
+
+    .bottom-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .bottom-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bottom-links a {
+      color: black;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .bottom-links a.active {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="books-section">
+      <div class="books-header">
+        <h1>Our Book Collection</h1>
+        <p>Click a book to read its story.</p>
+      </div>
+
+      <!-- Same HTML, just layout changed -->
+      <div class="shelf-container">
+        <div class="shelf left-shelf">
+          <div class="shelf-row">
+            <a href="alex.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 1">
+              <h3>Harry Potter</h3>
+              <p>J. K. Rowling</p>
+            </a>
+            <a href="althea.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 2">
+              <h3>Book Title 2</h3>
+              <p>Author 2</p>
+            </a>
+          </div>
+          <div class="shelf-row">
+            <a href="jayson.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 3">
+              <h3>Book Title 3</h3>
+              <p>Author 3</p>
+            </a>
+            <a href="juan.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 4">
+              <h3>Book Title 4</h3>
+              <p>Author 4</p>
+            </a>
+          </div>
+          <div class="shelf-row">
+            <a href="sophia.html" class="card">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQpeEI5QNiIwf04Cz_enbdC__p_lGN0lfiDQ&s" alt="Book 5">
+              <h3>Ang Mutya ng Section E</h3>
+              <p>Lara Flores</p>
+            </a>
+            <a href="jhanela.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 6">
+              <h3>Book Title 6</h3>
+              <p>Author 6</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="shelf right-shelf">
+          <div class="shelf-row">
+            <a href="adolfo.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 7">
+              <h3>Book Title 7</h3>
+              <p>Author 7</p>
+            </a>
+            <a href="joshua.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 8">
+              <h3>Book Title 8</h3>
+              <p>Author 8</p>
+            </a>
+          </div>
+          <div class="shelf-row">
+            <a href="ricamara.html" class="card">
+              <img src="https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781408855652.jpg" alt="Book 9">
+              <h3>Book Title 9</h3>
+              <p>Author 9</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom navigation -->
+  <nav class="bottom-bar" role="navigation" aria-label="Main navigation">
+    <nav class="bottom-bar" role="navigation" aria-label="Main navigation">
+    <div class="bottom-inner">
+      <div class="logo-wrap">
+        <img src="https://export-download.canva.com/wtPoc/DAG3JtwtPoc/1/0/0001-8302868766018531940.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251028T154120Z&X-Amz-Expires=60576&X-Amz-Signature=78d85aa0cd6fdf9a4154d7a05a8e7a99cdb45d7f7f6a3b0bcb251ffc824fbc0a&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.jpg&response-expires=Wed%2C%2029%20Oct%202025%2008%3A30%3A56%20GMT" alt="Logo" class="logo-img">
+      </div>
+      <ul class="bottom-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html" class="active">Books</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>

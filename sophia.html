@@ -1,0 +1,61 @@
+<!-- book5.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Title 5 - Website Name</title>
+  <link rel="stylesheet" href="booksfolderbackground.css">
+
+  <main class="container story">
+    <a class="back-link" href="books.html">← Back to Books</a>
+
+    <article class="story-card">
+      <h2>Ang Mutya ng Section E</h2>
+      <p class="byline">By Lara Flores</p>
+
+      <div class="story-content">
+        <p>In “Ang Mutya ng Section E” by Lara Flores, also known as Eatmore2behappy, women—particularly Jay-jay, the main character—are portrayed as strong, independent, and determined individuals who are often misunderstood and undervalued in a male-dominated world. Jay-jay is the only girl in Section E, a class known for its noisy and unruly all-male students. The moment she enters the room, her classmates quickly judge her based on her looks. One of the boys, believed to be part of Rakki’s group, even remarks, “She’s very pretty but a little noob.” This shows how women in the story are appreciated more for their physical appearance than for their abilities. Despite these unfair judgments, Jay-jay faces every challenge with courage and determination. Through her intelligence, confidence, and hard work, she eventually earns the respect of her classmates, proving that women deserve recognition not for their looks but for their strength and capability.
+
+As a female writer, Lara Flores’s perspective strongly shapes how the story is written. She gives close attention to Jay-jay’s emotions—her embarrassment, frustration, and insecurity—as shown in the scene where Jay-jay “lowered her head while clutching her bag” after being laughed at by her classmates. This moment highlights the emotional depth and realism that Flores brings to her story, allowing readers to feel the same pain and shame many girls experience when unfairly judged. Because Flores writes from a woman’s point of view, she expresses Jay-jay’s struggles with honesty and empathy, giving the story a sincere and relatable female voice that reflects the challenges faced by many young women in real life.
+
+The interactions between male and female characters are filled with tension and misunderstanding. As the only girl in her class, Jay-jay often becomes the target of teasing and underestimation, especially from the class president, Keifer. One scene that shows this is when the boys laugh after she accidentally walks into the wrong classroom, leaving her embarrassed and unsure of herself. This situation shows how the male characters tend to underestimate or challenge women’s roles in spaces they dominate. Jay-jay’s relationships with Keifer and Yuri also show how traditional gender roles affect how men treat women—sometimes acting protective, other times disrespectful—simply because of her gender.
+The story both supports and challenges traditional ideas about women. It supports them in the way Jay-jay is often praised for her beauty and called the “mutya” or muse of the section, reflecting how society often values women for their appearance. However, it also challenges these same beliefs, as Jay-jay refuses to be seen as just a pretty face. She works hard to prove she belongs in Section E and stands up for herself when treated unfairly. Her strength and bravery defy the stereotype that women should be quiet, weak, or dependent on men. By the end, she earns genuine respect not because of how she looks, but because of her confidence, determination, and intelligence.
+
+Patriarchal attitudes are also clearly seen in the way society and Jay-jay’s classmates treat her. Being the only girl in an all-male class symbolizes how women are often excluded or viewed as outsiders in environments controlled by men. Her classmates’ habit of judging her based on her looks before recognizing her skills mirrors how society still measures women’s worth through male standards. When some boys mock her or call her names like “crazy woman” after she defends herself, it shows how patriarchy tries to silence women who speak up. Despite this, Jay-jay remains steadfast. Her persistence reflects the ongoing fight of women for equality and respect in a world that continues to underestimate them.
+
+In conclusion, “Ang Mutya ng Section E” by Lara Flores presents a powerful picture of women’s struggles and strengths through Jay-jay’s story. The novel reveals how difficult it is for women to be accepted and respected in a society where men hold most of the power, yet it also celebrates their courage, wisdom, and determination. Jay-jay’s journey inspires readers to see that women can rise above judgment and stereotypes. Through her story, Lara Flores reminds us that true respect for women should come not from beauty, but from resilience, confidence, and inner strength.</p>
+      </div>
+    </article>
+  </main>
+
+<!-- FIXED WHITE BOTTOM NAV (always visible) -->
+  <nav class="bottom-bar" role="navigation" aria-label="Main navigation">
+    <div class="bottom-inner">
+      <!-- circular logo image — replace images/logo.png with your logo to override -->
+      <div class="logo-wrap">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQpeEI5QNiIwf04Cz_enbdC__p_lGN0lfiDQ&s" alt="Logo" class="logo-img">
+      </div>
+
+      <ul class="bottom-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    // small enhancement: mark active link on load
+    (function(){
+      const links = document.querySelectorAll('.bottom-links a');
+      const current = location.pathname.split('/').pop() || 'home.html';
+      links.forEach(a=>{
+        const href = a.getAttribute('href');
+        if (href === current) a.classList.add('active');
+      });
+    })();
+  </script>
+</body>
+</html>

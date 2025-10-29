@@ -1,0 +1,52 @@
+<!-- book3.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Title 3 - Website Name</title>
+  <link rel="stylesheet" href="booksfolderbackground.css">
+
+  <main class="container story">
+    <a class="back-link" href="books.html">← Back to Books</a>
+
+    <article class="story-card">
+      <h2>Book Title 3</h2>
+      <p class="byline">by Author 3</p>
+
+      <div class="story-content">
+        <p>Story paragraph 1 — replace with the actual story.</p>
+      </div>
+    </article>
+  </main>
+
+<!-- FIXED WHITE BOTTOM NAV (always visible) -->
+  <nav class="bottom-bar" role="navigation" aria-label="Main navigation">
+    <div class="bottom-inner">
+      <!-- circular logo image — replace images/logo.png with your logo to override -->
+      <div class="logo-wrap">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96'><circle cx='48' cy='48' r='48' fill='%23000000'/><text x='50%' y='54%' font-size='32' font-family='Arial' fill='%23ffffff' text-anchor='middle' alignment-baseline='middle'>GL</text></svg>" alt="Logo" class="logo-img">
+      </div>
+
+      <ul class="bottom-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    // small enhancement: mark active link on load
+    (function(){
+      const links = document.querySelectorAll('.bottom-links a');
+      const current = location.pathname.split('/').pop() || 'home.html';
+      links.forEach(a=>{
+        const href = a.getAttribute('href');
+        if (href === current) a.classList.add('active');
+      });
+    })();
+  </script>
+</body>
+</html>
