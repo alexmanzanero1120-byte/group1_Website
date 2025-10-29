@@ -1,5 +1,5 @@
 :root {
-  --page-bg: url("https://media-transformation.canva.com/b912693d-3984-470d-b6ae-fe70fec221d6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHS2JMIWUE%2F20251028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251028T030007Z&X-Amz-Expires=48689&X-Amz-Signature=acf3774f4895b2ee5c2fc1872a53b6b8003db5b72bddfe03d51062bd77b9f687&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27b912693d-3984-470d-b6ae-fe70fec221d6.jpg&response-expires=Tue%2C%2028%20Oct%202025%2016%3A31%3A36%20GMT") no-repeat center center fixed;
+  --page-bg: url("classroom.jpg") no-repeat center center fixed;
   --background-size: cover;
   --card-bg: #0b0b0b;
   --white: #ffffff;
@@ -190,3 +190,4 @@ body::before {
   background-position: center center;
   z-index: -1;
 }
+
