@@ -1,192 +1,38 @@
-:root {
-  --page-bg: url("https://media-transformation.canva.com/b912693d-3984-470d-b6ae-fe70fec221d6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHS2JMIWUE%2F20251028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251028T030007Z&X-Amz-Expires=48689&X-Amz-Signature=acf3774f4895b2ee5c2fc1872a53b6b8003db5b72bddfe03d51062bd77b9f687&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27b912693d-3984-470d-b6ae-fe70fec221d6.jpg&response-expires=Tue%2C%2028%20Oct%202025%2016%3A31%3A36%20GMT") no-repeat center center fixed;
-  --background-size: cover;
-  --card-bg: #0b0b0b;
-  --white: #ffffff;
-  --muted: #cfcfcf;
-  --accent: #ffd166;
-  --bar-height: 72px;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E T I T S</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="container">
+    <!-- HERO / FEATURED -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="site-title">E T I T S</h1>
+          <p class="lead">A small collection of short stories and creative writing. Replace this description with your own intro text.</p>
+          <a class="btn" href="books.html">Browse Books</a>
+        </div>
+    </section>
 
-/* Reset / base */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  background:var(--page-bg);
-  color:var(--white);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
-}
-
-/* Page container */
-.container{
-  max-width:1100px;
-  margin:48px auto 120px; /* bottom margin leaves space for fixed bottom bar */
-  padding:0 20px;
-}
-
-/* HERO */
-.hero-inner{
-  display:flex;
-  gap:28px;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-.site-title{
-  font-size:34px;
-  margin:0 0 8px 0;
-}
-.lead{
-  margin:0 0 18px 0;
-  color:var(--muted);
-  max-width:58ch;
-}
-.btn{
-  display:inline-block;
-  background:var(--accent);
-  color:#081228;
-  padding:10px 16px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-}
-
-/* Hero figure */
-.hero-figure{max-width:380px}
-.hero-image{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:12px;
-  box-shadow:0 6px 24px rgba(0,0,0,0.6);
-}
-.hero-caption{
-  margin-top:10px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* Highlights / grid */
-.highlights{margin-top:36px}
-.grid{
-  display:grid;
-  gap:18px;
-  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-  margin-top:18px;
-}
-.card{
-  background:var(--card-bg);
-  padding:12px;
-  border-radius:12px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.6);
-}
-.card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
-.card h3{margin:10px 0 6px 0}
-.card p{margin:0;color:var(--muted);font-size:13px}
-
-/* SMALLER variants */
-.small-card img{height:140px;object-fit:cover}
-
-/* STORY / BOOK page helpers (used later) */
-.story { margin-top:6px; }
-.cover { width:260px; border-radius:10px; }
-
-/* Bottom nav (same style as other pages) */
-.bottom-bar {
-  background: #ec8a1a;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
-}
-
-.bottom-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-}
-
-.logo-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.bottom-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.bottom-links a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.bottom-links a.active {
-  text-decoration: underline;
-}
-/* Ensure page content is readable under bottom bar on small screens */
-@media (max-width:560px){
-  .container{margin-bottom:160px}
-  .site-title{font-size:28px}
-  .hero-inner{flex-direction:column-reverse;align-items:flex-start}
-  .hero-figure{width:100%}
-  .card img{height:160px}
-}
-
-/* --- HOME PAGE BLACKBOARD POSITION FIX --- */
-.hero-inner {
-  position: absolute;
-  top: 40%;        /* adjust up/down */
-  left: 50%;       /* roughly center horizontally */
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  flex-direction: column;
-  width: 60%;
-}
-
-.site-title {
-  font-size: 36px;
-  font-weight: 700;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-}
-
-.lead {
-  color: #f0f0f0;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-  margin-bottom: 20px;
-}
-
-.btn {
-  background: var(--accent);
-  color: #000;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 10px 18px;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: var(--page-bg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: -1;
-}
+  <!-- Bottom Navigation -->
+  <nav class="bottom-bar">
+   <div class="bottom-inner">
+      <nav class="bottom-bar" role="navigation" aria-label="Main navigation">
+    <div class="bottom-inner">
+      <div class="logo-wrap">
+        <img src="https://export-download.canva.com/wtPoc/DAG3JtwtPoc/1/0/0001-8302868766018531940.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251028T154120Z&X-Amz-Expires=60576&X-Amz-Signature=78d85aa0cd6fdf9a4154d7a05a8e7a99cdb45d7f7f6a3b0bcb251ffc824fbc0a&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.jpg&response-expires=Wed%2C%2029%20Oct%202025%2008%3A30%3A56%20GMT" alt="Logo" class="logo-img">
+      </div>
+      <ul class="bottom-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+  </head>
+  </nav>
+<script>
