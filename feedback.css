@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: url("https://export-download.canva.com/hr80w/DAG3Frhr80w/47/0-330371518177386674.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20251028%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251028T093837Z&X-Amz-Expires=77605&X-Amz-Signature=3289a16444b5d41a642f0bf836919daae6fe16084cee68a63fafd708715902af&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27FEEDBACK.gif&response-expires=Wed%2C%2029%20Oct%202025%2007%3A12%3A02%20GMT") no-repeat center center fixed;
+  background: url("feedback.gif") no-repeat center center fixed;
   background-size: cover;
   color: #222;
   display: flex;
@@ -142,3 +142,4 @@ body {
 .bottom-links a.active {
   text-decoration: underline;
 }
+
