@@ -209,7 +209,8 @@ body {
 
 /* --- FIX: Prevent scroll content from being hidden behind bottom bar --- */
 .container.story {
-  padding-bottom: calc(var(--bar-height) + 80px);
+  padding-bottom: calc(var(--bar-height) + 130px);
 }
+
 
 
