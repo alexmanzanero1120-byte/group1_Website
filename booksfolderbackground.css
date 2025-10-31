@@ -208,9 +208,25 @@ body {
 }
 
 /* --- FIX: Prevent scroll content from being hidden behind bottom bar --- */
-.container.story {
-  padding-bottom: calc(var(--bar-height) + 130px);
+/* --- Scrollbar resize (make scrollbar smaller) --- */
+::-webkit-scrollbar {
+  width: 8px;              /* thinner scrollbar */
 }
+
+::-webkit-scrollbar-track {
+  background: #f0e6d2;     /* scrollbar track color (matches page background) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b58c4b; /* scrollbar thumb color */
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8a6a2f; /* darker on hover */
+}
+
+
 
 
 
