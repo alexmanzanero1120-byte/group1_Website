@@ -28,6 +28,18 @@ body{
   padding:0 20px;
 }
 
+.side-title h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.welcome-side {
+  font-size: 28px;
+  color: #facc15;
+  font-style: italic;
+  margin-right: 10px;
+}
+
 /* HERO */
 .hero-inner{
   display:flex;
@@ -190,4 +202,5 @@ body::before {
   background-position: center center;
   z-index: -1;
 }
+
 
